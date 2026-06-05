@@ -1,0 +1,26 @@
+
+# Cythonizing / Compilied Sources (Leave blank if needed in project)
+# *.cpp
+# *.c
+# *.hpp
+# *.h
+
+# Compiled Binaries Windows / Linux / Apple Macbooks / Etc...
+*.pyd
+*.so
+
+# Html Sources (Cython Optimzation fine tuning & Debugging)
+*.html
+
+# pip install -e . or uv pip install -e .
+*.egg-info
+
+# cython build folder
+build
+
+# __pycache__
+__pycache__
+
+.venv
+.vscode
+.pytest_cache

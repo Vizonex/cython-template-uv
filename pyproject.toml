@@ -1,0 +1,59 @@
+[project]
+name = "cython-template-uv"
+dynamic = ["version"]
+description = "Add your description here"
+readme = "README.md"
+
+# For the authors section very important that you have a 
+# business email to use if your willing to make one or disclose it.
+# You don't have to (it's not a requirement) but it's encouraged.
+authors = [
+    { name = "MY-NAME", email = "MYEMAIL@gmail.com" }
+]
+# Currently 3.9 is considered not in use anymore so supporting 3.10+ and onwards
+# is encouraged.
+requires-python = ">=3.10"
+dependencies = []
+
+# Comment out "Private :: Do Not Upload" if your repo isn't a template
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Private :: Do Not Upload"
+]
+
+# Some people prefer optional-dependencies based approches
+# and others may like requirements/*.txt To cut some
+# size restraints for some here is a optional-dependencies approch/example.
+[project.optional-dependencies]
+tests = ["pytest"]
+
+[build-system]
+requires = ["setuptools", "cython", "wheel"]
+
+
+[tool.setuptools.dynamic]
+# NOTE: Change library name <cython_template_uv> when you have thought of what the name
+# of your package should be.
+version = {attr = "cython_template_uv.__version__"}
+
+
+# Building wheels is extemely important in any project you make that requires compiling.
+# The reason we would do so is that extensions like Visual Studio C++ are known diskspace
+# eaters so some people may be lazy and may want us to compile the library for them.
+# this is why packages distribute things in wheels.
+[tool.cibuildwheel]
+build-frontend = "build"
+enable = ["cpython-freethreading"]
+
+
+# Uncomment if you need to use the ruff linter on the python side of things...
+# [tool.ruff.lint]
+# select = [
+#     "E",
+#     "W",
+#     "I",
+#     "F"
+# ]
+# ignore = [
+# ]
+
