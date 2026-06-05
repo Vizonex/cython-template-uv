@@ -31,7 +31,7 @@ jobs:
     - name: Install dependencies
     # I did however need to change how tests works since I am writing a better verison of pycares's tests
     # since I wanted to move to pytest - Vizonex
-      run: python -m pip install .[test]
+      run: python -m pip install .[tests]
     
     - name: Run PyTests
       env:
