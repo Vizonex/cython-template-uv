@@ -10,7 +10,7 @@ it working with the uv package manager.
 - Pytest folder for running and working with pytest workflow will help trigger it 
   to work right.
 - `setup.py` script for working with bigger projects.
-- `pyproject.toml` file with proper a proper `__version__` grabber using setuptools.
+- `pyproject.toml` file with dynamic `__version__` grabber using setuptools.
 - `__init__.pyx` script for extending Cython support via `cimport` or `import` likewise.
 
 ## Why
