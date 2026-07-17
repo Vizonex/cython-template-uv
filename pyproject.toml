@@ -43,7 +43,6 @@ version = {attr = "cython_template_uv.__version__"}
 # this is why packages distribute things in wheels.
 [tool.cibuildwheel]
 build-frontend = "build"
-enable = ["cpython-freethreading"]
 
 
 # Uncomment if you need to use the ruff linter on the python side of things...
